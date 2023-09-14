@@ -7,7 +7,8 @@
 		const queryString = window.location.search;
 		const urlParams = new URLSearchParams(queryString);
 		const data = urlParams.get('data');
-		const andLink = 'https://loremasters.com/play/multiplayer?data=' + data;
+		//const andLink = 'https://loremasters.com/play/multiplayer?data=' + data;
+		const andLink = 'https://loremaster-test.firebaseapp.com?data=' + data;
 		//window.alert(data);
 		 //document.getElementById("android_link")
 		 document.getElementById("android_link").href = andLink;

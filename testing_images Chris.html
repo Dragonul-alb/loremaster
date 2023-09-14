@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+	
+  </head>
+  <style>
+	.container {
+	  position: relative;
+	  text-align: center;
+	  color: white;
+	}
+	.centered {
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	}
+  </style>
+  <body>
+	<table align="center" border="0" cellpadding="1" cellspacing="1" style="height:600px; width:80%">
+	<tbody>
+				<tr>
+			<td VALIGN = Middle Align = Center height="150px">
+
+			</td>
+		</tr>
+		<tr>
+			<td VALIGN = Middle Align = Center>
+				<img src="Loremasters+Pathfinders-Logo 1.png" alt="button" width="450">
+			</td>
+		</tr>
+		<tr>
+			<td VALIGN = Middle Align = Center>
+				<p><h3>Click below to join your friend's Challenge</h3></p>
+			</td>
+		</tr>
+		<tr>
+			<td VALIGN = Middle Align = Center>
+				<div class="container">
+					<img src="Google_play_dwnld.png" alt="button" width="300px" height="30%">
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td VALIGN = Middle Align = Center>
+				<div class="container">
+					<img src="button-without-text.png" width="350px" height="30%">
+					<div class="centered" valign="top"><b>PLAY NOW</b></div>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td VALIGN = Middle Align = Center>
+				<p><h3>Visit us at <a href="https://www.loremasters.com">www.loremasters.com</a></h3></p>
+				<hr width="75% color="grey">
+				<font color="grey"><BR />©2023 LORE MASTERS INC. 
+				<BR />© 2023 PAIZO INC. 
+				<BR />ALL RIGHTS RESERVED.</p></font>
+			</td>
+		</tr>
+	</tbody>
+	</table>
+    <div id="mydiv"></div>
+    <script type="text/babel">
+		const queryString = window.location.search;
+		const urlParams = new URLSearchParams(queryString);
+		const data = urlParams.get('data');
+    	const url = {
+   			webURL: 'https://www.loremasters.com',
+   			iosURL: 'https://apps.apple.com/app/pathfinder-lore-masters/id1671004225',
+   			andURL: 'https://play.google.com/store/apps/details?id=com.loremasters.pathfinder2e&hl=en-US&ah=JY2UHsOxekkCGt7D2KjUlMYybrE&pli=1', 
+			andApp: 'loremasters-pathfinder://play/multiplayer?data=' + data,
+			iosApp: 'loremasters-pathfinder://play/multiplayer?data=' + data
+		};
+		const deep_link = url.webURL;
+		
+		function App() {
+      	const ua = navigator.userAgent;
+        if (/android/i.test(ua)) {
+			//return window.location.assign(url.andURL);
+			create_buttons(url.andURL, url.andApp);
+		}
+        else if (/iPad|iPhone|iPod/.test(ua) ){
+        	//return window.location.assign(url.iosURL);
+			create_buttons(url.iosURL, url.iosApp);
+        }
+        else 
+        	//return window.location.assign(url.webURL);
+			//window.alert(url.webURL);
+		}
+		
+		function create_buttons(d_link, a_install) {
+			var b1 = document.createElement("BUTTON");
+			var b2 = document.createElement("BUTTON");
+			var t1 = document.createTextNode("INSTALL THE GAME");
+			var t2 = document.createTextNode("ACCEPT CHALLENGE!");
+			
+			b1.addEventListener("click", function() {window.location.assign(d_link);});
+			b2.addEventListener("click", function() {window.location.assign(a_install);});
+			b1.appendChild(t1);
+			b2.appendChild(t2);
+			document.body.appendChild(b1);
+			document.body.appendChild(b2);
+		}
+      const container = document.getElementById('mydiv');
+      const root = ReactDOM.createRoot(container);
+      root.render(<App />);
+    </script>
+  </body>
+</html>

@@ -32,13 +32,15 @@
 		}
         else if (/iPad|iPhone|iPod/.test(ua) ){
         	//return window.location.assign(url.iosURL);
-			create_buttons(url.iosURL, url.iosApp);
+			//create_buttons(url.iosURL, url.iosApp);
+			return window.location.assign('iOS_deep_linking.html' + '?data=' + data );
         }
         else 
         	return window.location.assign(url.webURL);
 			//window.alert(url.webURL);
 			//window.alert(data);
 			//return window.location.assign('Android_deep_linking.html');
+			//return window.location.assign('iOS_deep_linking.html' + '?data=' + data );
 			
 		}
 		

@@ -28,6 +28,7 @@
 			//return window.location.assign(url.andURL);
 			//create_buttons(url.andURL, url.andApp);
 			//return window.location.assign('file:///C:/Users/Bimbo/OneDrive/EXOstatic_documents/Zzz_otros/2023/08%20-%20August/Android_deep_linking.html' + '?data=' + data );
+			return window.location.assign('Android_deep_linking.html' + '?data=' + data );
 		}
         else if (/iPad|iPhone|iPod/.test(ua) ){
         	//return window.location.assign(url.iosURL);
@@ -37,7 +38,7 @@
         	return window.location.assign(url.webURL);
 			//window.alert(url.webURL);
 			//window.alert(data);
-			return window.location.assign('Android_deep_linking.html');
+			//return window.location.assign('Android_deep_linking.html');
 			
 		}
 		

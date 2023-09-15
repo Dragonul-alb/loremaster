@@ -7,12 +7,8 @@
 		const queryString = window.location.search;
 		const urlParams = new URLSearchParams(queryString);
 		const data = urlParams.get('data');
-		//const andLink = 'loremasters-pathfinder://play/multiplayer?data='  + data;
-		//const andLink = 'https://loremaster-test.web.app?data=' + data;
-		const andLink = 'https://loremasters.com/pathfinder/play/multiplayer?data=' + data;
-		//window.alert(andLink);
-		 //document.getElementById("android_link")
-		 document.getElementById("android_link").href = andLink;
+		const challenge_link = 'https://loremasters.com/pathfinder/play/multiplayer?data=' + data;
+		document.getElementById("android_link").href = challenge_link;
 	</script>
   <style>
 	.container {
@@ -57,10 +53,10 @@
 		<tr>
 			<td VALIGN = Middle Align = Center>
 				<div class="container">
-					<a id="android_link" href="" target="_blank">
+					<a id="android_link">
 						<img src="button-without-text.png" width="350px" height="30%">
 					</a>
-					<div class="centered" valign="top"><b>PLAY NOW182</b></div>
+					<div class="centered" valign="top"><b>PLAY NOW189</b></div>
 				</div>
 			</td>
 		</tr>

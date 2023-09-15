@@ -7,9 +7,10 @@
 		const queryString = window.location.search;
 		const urlParams = new URLSearchParams(queryString);
 		const data = urlParams.get('data');
-		const andLink = 'loremasters-pathfinder://play/multiplayer?data='  + data;
+		//const andLink = 'loremasters-pathfinder://play/multiplayer?data='  + data;
 		//const andLink = 'https://loremaster-test.web.app?data=' + data;
-		window.alert(andLink);
+		const andLink = 'https://loremasters.com/pathfinder/play/multiplayer?data=' + data;
+		//window.alert(andLink);
 		 //document.getElementById("android_link")
 		 document.getElementById("android_link").href = andLink;
 	</script>

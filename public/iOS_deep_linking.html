@@ -4,12 +4,14 @@
 	    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 	</head>
   	<script type="text/babel">
+		location.reload();
+		return false;
 		const queryString = window.location.search;
 		const urlParams = new URLSearchParams(queryString);
 		const data = urlParams.get('data');
 		const challenge_link = 'loremasters-pathfinder://play/multiplayer?data=' + data
 		document.getElementById("iPhone_link").href = challenge_link;
-		location.reload(false);
+		
 	</script>
   <style>
 	.container {
@@ -57,7 +59,7 @@
 					<a id="iPhone_link">
 						<img src="button-without-text.png" width="350px" height="30%">
 					</a>
-					<div class="centered" valign="top"><b>PLAY 220</b></div>
+					<div class="centered" valign="top"><b>PLAY 222</b></div>
 				</div>
 			</td>
 		</tr>

@@ -16,13 +16,13 @@
    			iosURL: 'iOS_deep_linking.html'     + '?data=' + data,
    			andURL: 'Android_deep_linking.html' + '?data=' + data 
 		};
+		window.alert(navigator.userAgent);
 		
 		function App() {
 			const ua = navigator.userAgent;
 			if (/android/i.test(ua)) { return window.location.assign(url.andURL); }
 			else if (/iPad|iPhone|iPod/.test(ua) )
 			{	
-				window.alert(ua);
 				return window.location.assign(url.iosURL); 
 			}
 			else return window.location.assign(url.webURL);

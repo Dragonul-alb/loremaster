@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<script src="react.development.js" crossorigin></script>
+    <script src="react-dom.development.js" crossorigin></script>
+    <script src="babel.min.js"></script>
+  </head>
+  <body>
+    <div id="mydiv"></div>
+    <script type="text/babel">
+		const queryString = window.location.search;
+		const urlParams = new URLSearchParams(queryString);
+		const data = urlParams.get('data');
+    	const url = {
+   			webURL: 'https://www.loremasters.com',
+   			iosURL: 'iOS_deep_linking.html'     + '?data=' + data,
+   			andURL: 'Android_deep_linking.html' + '?data=' + data,
+			andDep: 'loremasters-pathfinder://play/multiplayer?data=' + data,
+			iosDep: 'loremasters-pathfinder://play/multiplayer?data=' + data
+		};
+		//alert(window.navigator.userAgent);
+		
+		function App() {
+			const ua = navigator.userAgent;
+			if (/android/i.test(ua)) 
+			{ 
+				return window.location.assign(url.andURL); 
+			}
+			else if (/iPad|iPhone|Macintosh/.test(ua) )
+			{	
+				window.location.assign(url.iosURL); 
+				return window.location.assign(url.iosURL); 
+			}
+			else return window.location.assign(url.webURL);
+		}
+		const container = document.getElementById('mydiv');
+		const root = ReactDOM.createRoot(container);
+		root.render(<App />);
+    </script>
+  </body>
+</html>

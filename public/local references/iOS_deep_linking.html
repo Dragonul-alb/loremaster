@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>	
+	    <script src="babel.min.js"></script>
+	</head>
+  	<script type="text/babel">
+		const queryString = window.location.search;
+		const urlParams = new URLSearchParams(queryString);
+		const data = urlParams.get('data');
+		const challenge_link = 'loremasters-pathfinder://play/multiplayer?data=' + data
+		document.getElementById("iPhone_link").href = challenge_link;
+		const reloadUsingLocationHash = () => {
+			window.location.hash = "reload";
+		}
+		window.onload = reloadUsingLocationHash();
+		//alert(window.location.search);
+		
+	</script>
+  <style>
+	.container {
+	  position: relative;
+	  text-align: center;
+	  color: white;
+	}
+	.centered {
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	}
+  </style>
+  <body>
+	<table align="center" border="0" cellpadding="1" cellspacing="1" style="height:600px; width:80%">
+	<tbody>
+				<tr>
+			<td VALIGN = Middle Align = Center height="150px">
+
+			</td>
+		</tr>
+		<tr>
+			<td VALIGN = Middle Align = Center>
+				<img src="Loremasters+Pathfinders-Logo 1.png" alt="button" width="450">
+			</td>
+		</tr>
+		<tr>
+			<td VALIGN = Middle Align = Center>
+				<p><h3>Click below to join your friend's Challenge</h3></p>
+			</td>
+		</tr>
+		<tr>
+			<td VALIGN = Middle Align = Center>
+				<div class="container">
+					<a href="https://apps.apple.com/app/pathfinder-lore-masters/id1671004225">
+						<img src="apple_pre_order_full-400x134.png" alt="button" width="300px" height="30%">
+					</a>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td VALIGN = Middle Align = Center>
+				<div class="container">
+					<a id="iPhone_link">
+						<img src="button-without-text.png" width="350px" height="30%" href="">
+					</a>
+					<div class="centered" valign="top"><b>PLAY 229</b></div>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td VALIGN = Middle Align = Center>
+				<p><h3>Visit us at <a href="https://www.loremasters.com">www.loremasters.com</a></h3></p>
+				<hr width="75% color="grey">
+				<font color="grey"><BR />©2023 LORE MASTERS INC. 
+				<BR />© 2023 PAIZO INC. VERSION 229
+				<BR />ALL RIGHTS RESERVED.</p></font>
+			</td>
+		</tr>
+	</tbody>
+	</table>
+    <div id="mydiv"></div>
+  </body>
+</html>

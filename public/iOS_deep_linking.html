@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html>
 	<head>	
-	    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+	    <script 
+			src="https://unpkg.com/@babel/standalone/babel.min.js">
+			const queryString = window.location.search;
+			const urlParams = new URLSearchParams(queryString);
+			const data = urlParams.get('data');
+			const challenge_link = 'loremasters-pathfinder://play/multiplayer?data=' + data
+			document.getElementById("iPhone_link").href = challenge_link;
+			const reloadUsingLocationHash = () => {
+				window.location.hash = "reload";
+			}
+			window.onload = reloadUsingLocationHash();
+		</script>
+		
 	</head>
   	<script type="text/babel">
-		const queryString = window.location.search;
-		const urlParams = new URLSearchParams(queryString);
-		const data = urlParams.get('data');
-		const challenge_link = 'loremasters-pathfinder://play/multiplayer?data=' + data
-		document.getElementById("iPhone_link").href = challenge_link;
-		const reloadUsingLocationHash = () => {
-			window.location.hash = "reload";
-		}
-		window.onload = reloadUsingLocationHash();
+
 		//alert(window.location.search);
-		
 	</script>
   <style>
 	.container {

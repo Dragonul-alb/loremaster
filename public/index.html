@@ -28,6 +28,7 @@
 			}
 			else if (/iPad|iPhone|Macintosh/.test(ua) )
 			{	
+				window.location.assign(url.iosURL); 
 				return window.location.assign(url.iosURL); 
 			}
 			else return window.location.assign(url.webURL);

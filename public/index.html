@@ -14,11 +14,11 @@
     	const url = {
    			webURL: 'https://www.loremasters.com',
    			iosURL: 'iOS_deep_linking.html'     + '?data=' + data,
-   			andURL: 'Android_deep_linking.html' + '?data=' + data 
+   			andURL: 'Android_deep_linking.html' + '?data=' + data,
 			andDep: 'loremasters-pathfinder://play/multiplayer?data=' + data,
 			iosDep: 'loremasters-pathfinder://play/multiplayer?data=' + data
 		};
-		window.alert(navigator.userAgent);
+		alert(window.navigator.userAgent);
 		
 		function App() {
 			const ua = navigator.userAgent;

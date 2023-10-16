@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
-	<head>	
-
+<head>	
+	    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 	</head>
-  
-  <body>
-  	    <script lang="javascript">
-			const queryString = window.location.search;
-			const urlParams = new URLSearchParams(queryString);
-			const data = urlParams.get('data');
-			const challenge_link = 'loremasters-pathfinder://play/multiplayer?data=' + data
-			document.getElementById("iPhone_link").href = challenge_link;
-		</script>
-<style>
+  	<script type="text/babel">
+		const queryString = window.location.search;
+		const urlParams = new URLSearchParams(queryString);
+		const data = urlParams.get('data');
+		const challenge_link = 'loremasters-pathfinder://play/multiplayer?data=' + data;
+		document.getElementById("iPhone_link").href = challenge_link;
+		console.log('data')
+		console.log(data)
+	</script>
+  <style>
 	.container {
 	  position: relative;
 	  text-align: center;
@@ -24,7 +24,12 @@
 	  left: 50%;
 	  transform: translate(-50%, -50%);
 	}
-  </style>		
+  </style>
+	</head>
+  
+  <body>
+
+	
 	<table align="center" border="0" cellpadding="1" cellspacing="1" style="height:90%; width:80%">
 	<tbody>
 				<tr>
@@ -34,7 +39,7 @@
 		</tr>
 		<tr>
 			<td VALIGN = Middle Align = Center>
-				<a href="https://www.loremasters.com">
+				<a id="LM_logo" href="https://www.loremasters.com"> 
 					<img src="Loremasters+Pathfinders-Logo 1.png" width="450">
 				</a>
 			</td>
@@ -47,7 +52,7 @@
 		<tr>
 			<td VALIGN = Middle Align = Center>
 				<div class="container">
-					<a href="https://apps.apple.com/app/pathfinder-lore-masters/id1671004225">
+					<a id="dw_button" href="https://apps.apple.com/app/pathfinder-lore-masters/id1671004225">
 						<img src="apple_pre_order_full-400x134.png" alt="button" width="35%" height="35%">
 					</a>
 				</div>
@@ -59,7 +64,7 @@
 					<a id="iPhone_link">
 						<img src="button-without-text.png" width="38%" height="38%" href="">
 					</a>
-					<div class="centered" valign="top"><b>PLAY 248</b></div>
+					<div class="centered" valign="top"><b>PLAY</b></div>
 				</div>
 			</td>
 		</tr>
@@ -68,7 +73,7 @@
 				<p><h3>Visit us at <a href="https://www.loremasters.com">www.loremasters.com</a></h3></p>
 				<hr width="75% color="grey">
 				<font color="grey"><BR />©2023 LORE MASTERS INC. 
-				<BR />© 2023 PAIZO INC. VERSION 248
+				<BR />© 2023 PAIZO INC. VERSION 252
 				<BR />ALL RIGHTS RESERVED.</p></font>
 			</td>
 		</tr>
